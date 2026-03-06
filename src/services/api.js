@@ -1,6 +1,6 @@
 import axios from 'axios';
 const API_URL = 'http://localhost:5000/api/empleados';
-export const getCountries = async () => {
+export const getEmpleados = async () => {
     try {
         const response = await axios.get(API_URL);
         return response.data;
@@ -9,7 +9,7 @@ export const getCountries = async () => {
         throw error;
     }
 };
-export const getCountry = async (id) => {
+export const getEmpleado = async (id) => {
     try {
         const response = await axios.get(`${API_URL}/${id}`);
         return response.data;
@@ -18,25 +18,25 @@ export const getCountry = async (id) => {
         throw error;
     }
 };
-export const createCountry = async (country) => {
+export const createEmpleado = async (empleado) => {
     try {
-        const response = await axios.post(API_URL, country);
+        const response = await axios.post(API_URL, empleado);
         return response.data;
     } catch (error) {
         console.error('Error al crear el empleado:', error);
         throw error;
     }
 };
-export const updateCountry = async (id, country) => {
+export const updateEmpleado = async (id, empleado) => {
     try {
-        const response = await axios.put(`${API_URL}/${id}`, country);
+        const response = await axios.put(`${API_URL}/${id}`, empleado);
         return response.data;
     } catch (error) {
         console.error('Error al actualizar el empleado:', error);
         throw error;
     }
 };
-export const deleteCountry = async (id) => {
+export const deleteEmpleado = async (id) => {
     try {
         const response = await axios.delete(`${API_URL}/${id}`);
         return response.data;

@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import CountryList from './componentsyo/countryList';
+import EmpleadoList from './componentsEmpleado/EmpleadoList';
 import './App.css'
 function App() {
   const [count, setCount] = useState(0)
@@ -11,7 +11,7 @@ function App() {
         <h1>Administrador de Empleados</h1>
       </header>
       <main>
-        <CountryList />
+        <EmpleadoList />
       </main>
       <footer>
         <p>CRUD de Empleados © 2026</p>
